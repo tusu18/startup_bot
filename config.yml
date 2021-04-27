@@ -1,0 +1,35 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: HFTransformersNLP
+    # Name of the language model to use
+    model_name: "gpt2"
+    # Pre-Trained weights to be loaded
+    model_weights: "gpt2"
+
+    # An optional path to a specific directory to download and cache the pre-trained model weights.
+    # The `default` cache_dir is the same as https://huggingface.co/transformers/serialization.html#cache-directory .
+    cache_dir: null
+  - name: DIETClassifier
+    epochs: 200
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    split_entities_by_comma:
+      address: False
+      ingredients: True
+    max_history: 8
+    epochs: 200
+  - name: MappingPolicy  
