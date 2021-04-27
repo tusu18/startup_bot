@@ -1,0 +1,748 @@
+[
+  {
+    "text": "Can you tell me about Latest stock news",
+    "entities": [
+      {
+        "start": 22,
+        "end": 39,
+        "value": "Latest stock news",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 22,
+        "end": 28,
+        "confidence_entity": 0.9922747015953064,
+        "value": "Latest",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stocks",
+        "start": 29,
+        "end": 34,
+        "confidence_entity": 0.5591577887535095,
+        "value": "stock",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which [startup has the highest growth]this year](stocks)",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.9603127837181091,
+        "value": "year](stocks",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What are the trending stocks today",
+    "entities": [
+      {
+        "start": 13,
+        "end": 34,
+        "value": "trending stocks today",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Okay tell me about Infosys stocks?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 33,
+        "value": "Infosys stocks",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what is the current gold price?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "gold price",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 25,
+        "end": 30,
+        "confidence_entity": 0.9963669776916504,
+        "value": "price",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what si the current price of bitcoin?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 36,
+        "value": "price of bitcoin",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9949811100959778,
+        "value": "price",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can i get info on some [VC] on your site?{\"entity\": \"vc\", \"value\": \"VC\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "vc",
+        "start": 24,
+        "end": 26,
+        "confidence_entity": 0.9776830077171326,
+        "value": "VC",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "vc",
+        "start": 53,
+        "end": 55,
+        "confidence_entity": 0.9425622820854187,
+        "value": "vc",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "vc",
+        "start": 68,
+        "end": 70,
+        "confidence_entity": 0.6820584535598755,
+        "value": "VC",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Top [VC] and firm on your portal{\"entity\": \"vc\", \"value\": \"VC\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "vc",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.6246539354324341,
+        "value": "VC",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "vc",
+        "start": 44,
+        "end": 46,
+        "confidence_entity": 0.9751173853874207,
+        "value": "vc",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "vc",
+        "start": 59,
+        "end": 61,
+        "confidence_entity": 0.7051960825920105,
+        "value": "VC",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "So what vc are there on your portal",
+    "entities": [
+      {
+        "start": 8,
+        "end": 10,
+        "value": "vc",
+        "entity": "vc"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What vc are there on your portal?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "vc",
+        "entity": "vc"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What VC are there on your portal?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "VC",
+        "entity": "vc"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can You tell me about Venture Capital Scheme",
+    "entities": [
+      {
+        "start": 22,
+        "end": 44,
+        "value": "Venture Capital Scheme",
+        "entity": "sch"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tell me about [Startup India Seed Fund] scheme(sch)",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sch",
+        "start": 15,
+        "end": 22,
+        "confidence_entity": 0.49333736300468445,
+        "value": "Startup",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "sch",
+        "start": 23,
+        "end": 33,
+        "confidence_entity": 0.9913030862808228,
+        "value": "India Seed",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "sch",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.9938765168190002,
+        "value": "scheme(sch",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me more about The Motley Fool",
+    "entities": [
+      {
+        "start": 19,
+        "end": 34,
+        "value": "The Motley Fool",
+        "entity": "sch"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to know about my field",
+    "entities": [
+      {
+        "start": 24,
+        "end": 29,
+        "value": "field",
+        "entity": "ff"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "My field is IT",
+    "entities": [
+      {
+        "start": 12,
+        "end": 14,
+        "value": "IT",
+        "entity": "ff"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Kinda Foodtech",
+    "entities": [
+      {
+        "start": 6,
+        "end": 14,
+        "value": "Foodtech",
+        "entity": "ff"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do MAharashtra have highest [Startups]?{\"entity\": \"strtp\",\"value\": \"Startup\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "top",
+        "start": 3,
+        "end": 14,
+        "confidence_entity": 0.9871529936790466,
+        "value": "MAharashtra",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "mentor",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "mentor",
+        "entity": "typ"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Mentor",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Mentor",
+        "entity": "typ"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Best startup from Mumbai?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "Mumbai",
+        "entity": "top"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which [stocks is trending] right now?{\"entity\": \"stocks\", \"value\": \"stocks is trending\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 17,
+        "end": 25,
+        "confidence_entity": 0.998077392578125,
+        "value": "trending",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stocks",
+        "start": 78,
+        "end": 86,
+        "confidence_entity": 0.9873493313789368,
+        "value": "trending",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which is the Hottest Stock Today",
+    "entities": [
+      {
+        "start": 13,
+        "end": 32,
+        "value": "Hottest Stock Today",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 21,
+        "end": 32,
+        "confidence_entity": 0.9856217503547668,
+        "value": "Stock Today",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which startup has the largest turnover this year",
+    "entities": [
+      {
+        "start": 6,
+        "end": 48,
+        "value": "Hottest Stock Today",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the stock value of Tesla",
+    "entities": [
+      {
+        "start": 12,
+        "end": 32,
+        "value": "stock value of tesla",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9485872983932495,
+        "value": "stock",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me about latest Unicorn Startup",
+    "entities": [
+      {
+        "start": 14,
+        "end": 36,
+        "value": "latest Unicorn Startup",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.9953168630599976,
+        "value": "latest",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ok tell me about TCS stocks",
+    "entities": [
+      {
+        "start": 17,
+        "end": 27,
+        "value": "TCS stocks",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.992466390132904,
+        "value": "stocks",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the latest startup stocks to watch",
+    "entities": [
+      {
+        "start": 12,
+        "end": 33,
+        "value": "latest startup stocks",
+        "entity": "stocks"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9971250891685486,
+        "value": "latest",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stocks",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.6109955906867981,
+        "value": "stocks",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What are the VCon your site?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 15,
+        "value": "VC",
+        "entity": "vc"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can u get me list of vc on your portal",
+    "entities": [
+      {
+        "start": 21,
+        "end": 23,
+        "value": "vc",
+        "entity": "vc"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tell me about udyog yojna scheme",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "udyog yojna",
+        "entity": "sch"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sch",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.5203836560249329,
+        "value": "udyog",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "sch",
+        "start": 26,
+        "end": 32,
+        "confidence_entity": 0.999289870262146,
+        "value": "scheme",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about the best schemes for startups",
+    "entities": [
+      {
+        "start": 23,
+        "end": 42,
+        "value": "scheme for startups",
+        "entity": "sch"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "sch",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.9984076619148254,
+        "value": "schemes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Is there any government startup scheme?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 38,
+        "value": "government startup scheme",
+        "entity": "sch"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "stocks",
+        "start": 13,
+        "end": 23,
+        "confidence_entity": 0.6066785454750061,
+        "value": "government",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "sch",
+        "start": 24,
+        "end": 38,
+        "confidence_entity": 0.9968101382255554,
+        "value": "startup scheme",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "No i dont want to signup",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sup",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9777519106864929,
+        "value": "signup",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My field is Healthcare",
+    "entities": [
+      {
+        "start": 12,
+        "end": 22,
+        "value": "Healthcare",
+        "entity": "ff"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "My startup is in [Foodtech] field{\"entity\": \"ff\",\"value\": \"Foodtech\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "ff",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.9974930286407471,
+        "value": "Foodtech",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ff",
+        "start": 59,
+        "end": 67,
+        "confidence_entity": 0.9988139867782593,
+        "value": "Foodtech",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Okay Cool",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sch",
+        "start": 5,
+        "end": 9,
+        "confidence_entity": 0.7704800963401794,
+        "value": "Cool",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which states have startup",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "Startup",
+        "entity": "strtp"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can You give stats on Startup in different state",
+    "entities": [
+      {
+        "start": 22,
+        "end": 29,
+        "value": "Startup",
+        "entity": "strtp"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Startup",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Startup",
+        "entity": "typ"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "startup",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "startup",
+        "entity": "typ"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "startup",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Startup",
+        "entity": "typ"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which are the top startup from Maharashtra?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 42,
+        "value": "Maharashtra",
+        "entity": "top"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "So who are the motely fool",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sch",
+        "start": 11,
+        "end": 26,
+        "confidence_entity": 0.9137163758277893,
+        "value": "the motely fool",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
