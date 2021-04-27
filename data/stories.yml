@@ -1,0 +1,1397 @@
+version: "2.0"
+stories:
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_stocks
+    entities:
+    - stock: Latest stock news
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: null
+  - intent: get_stocks
+    entities:
+    - stocks: Which stocks is trending right now
+  - slot_was_set:
+    - stocks: Which stocks is trending right now
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: Which stocks is trending right now
+  - intent: get_vc
+    entities:
+    - vc: VC
+  - slot_was_set:
+    - vc: VC
+  - action: utter_subs
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_stocks
+    entities:
+    - stocks: startup has the highest
+    - stocks: this year
+  - slot_was_set:
+    - stocks: this year
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: this year
+  - intent: goodbye
+  - action: utter_bye
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_scheme
+    entities:
+    - sch: India seed scheme
+  - slot_was_set:
+    - sch: India seed scheme
+  - action: get_scheme_now
+  - intent: get_stocks
+    entities:
+    - stocks: trending stocks today
+  - slot_was_set:
+    - stocks: trending stocks today
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: trending stocks today
+  - intent: get_stocks
+    entities:
+    - stocks: stock price of Paytm
+  - slot_was_set:
+    - stocks: stock price of Paytm
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: stock price of Paytm
+  - intent: goodbye
+  - action: utter_ask_stats
+  - intent: goodbye
+  - action: utter_bye
+  - action: utter_subscribe
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_startup
+    entities:
+    - strtp: Startup
+  - slot_was_set:
+    - strtp: Startup
+  - action: get_startup_now
+  - intent: affirm
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - intent: get_scheme
+    entities:
+    - sch: dpiit scheme
+  - slot_was_set:
+    - sch: dpiit scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: dpiit scheme
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - intent: get_startup
+    entities:
+    - strtp: startup
+  - slot_was_set:
+    - strtp: startup
+  - action: get_startup_now
+  - intent: get_vc
+    entities:
+    - vc: vc
+  - slot_was_set:
+    - vc: vc
+  - action: utter_subs
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: get_vc_now
+  - slot_was_set:
+    - vc: vc
+  - intent: get_field
+    entities:
+    - ff: Fintech
+  - slot_was_set:
+    - ff: Fintech
+  - action: utter_field
+  - intent: affirm
+  - action: get_field_now
+  - slot_was_set:
+    - ff: Fintech
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_stocks
+    entities:
+    - stocks: latest Unicorn Startup
+  - slot_was_set:
+    - stocks: latest Unicorn Startup
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: latest Unicorn Startup
+  - intent: affirm
+  - action: utter_stock
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: mentor
+  - slot_was_set:
+    - typ: mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: mentor
+  - intent: get_startup
+    entities:
+    - strtp: startup
+  - slot_was_set:
+    - strtp: startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: startup
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_scheme
+    entities:
+    - sch: aspire
+  - slot_was_set:
+    - sch: aspire
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: aspire
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: startup
+  - slot_was_set:
+    - typ: startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_ask_summary
+  - intent: affirm
+  - action: utter_field
+  - intent: get_field
+  - action: utter_stock
+  - intent: get_summary
+  - action: utter_confirm
+  - action: get_summary
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_scheme
+    entities:
+    - sch: DPIIT scheme
+  - slot_was_set:
+    - sch: DPIIT scheme
+  - action: get_scheme_now
+  - intent: get_bot
+  - action: utter_bot
+  - action: utter_stock
+  - intent: get_startup
+    entities:
+    - strtp: startup
+  - slot_was_set:
+    - strtp: startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: startup
+  - intent: get_top_startup
+    entities:
+    - top: Maharashtra
+  - action: get_top_startup_now
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: goodbye
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: mentor
+  - slot_was_set:
+    - typ: mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: mentor
+  - action: utter_ask_mentor
+  - intent: reject
+  - action: utter_stock
+  - intent: get_register
+  - action: utter_register_process
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_stock
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Mentor
+  - slot_was_set:
+    - typ: Mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Mentor
+  - action: utter_ask_mentor
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Mentor
+  - slot_was_set:
+    - typ: Mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Mentor
+  - action: utter_ask_mentor
+  - intent: reject
+  - action: utter_stock
+  - intent: get_register
+  - action: utter_register_process
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: startup
+  - slot_was_set:
+    - typ: startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: startup
+  - action: utter_stock
+  - intent: get_vc
+    entities:
+    - vc: vc
+  - slot_was_set:
+    - vc: vc
+  - action: utter_subs
+  - intent: reject
+  - action: utter_ask_stats
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_startup
+    entities:
+    - strtp: startup
+  - slot_was_set:
+    - strtp: startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: startup
+  - intent: affirm
+  - action: utter_scheme
+  - intent: get_scheme
+    entities:
+    - sch: startup india scheme
+  - slot_was_set:
+    - sch: startup india scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: startup india scheme
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: Story from Conversation ID 90ce48ac871b4bfa9e3250d6589c0749
+  steps:
+  - slot_was_set:
+    - strtp: Startup
+  - intent: get_scheme
+    entities:
+    - sch: Startup India Seed Fund
+  - slot_was_set:
+    - sch: Startup India Seed Fund
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: Startup India Seed Fund
+  - intent: affirm
+  - action: utter_subscribe
+  - intent: goodbye
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_ask_summary
+  - intent: reject
+  - action: utter_stock
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: reject
+  - action: utter_stock
+  - intent: get_vc
+    entities:
+    - vc: VC
+  - slot_was_set:
+    - vc: VC
+  - action: utter_subs
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: Story from Conversation ID cedb600b76a544e4a00d6a7ae4f53485
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_stocks
+    entities:
+    - stocks: TCS stocks
+  - slot_was_set:
+    - stocks: TCS stocks
+  - action: get_stocks_now
+  - intent: affirm
+  - action: utter_scheme
+  - intent: get_scheme
+    entities:
+    - sch: ASPIRE scheme
+  - slot_was_set:
+    - sch: ASPIRE scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: ASPIRE scheme
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: affirm
+  - action: utter_scheme
+  - intent: get_scheme
+    entities:
+    - sch: MUDRA BANK scheme
+  - slot_was_set:
+    - sch: MUDRA BANK scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: MUDRA BANK scheme
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: mentor
+  - slot_was_set:
+    - typ: mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: mentor
+  - action: utter_ask_mentor
+  - intent: get_bot
+  - action: utter_bot
+  - action: utter_stock
+  - intent: get_mentee_info
+  - action: utter_register_process
+  - intent: reject
+  - action: utter_stock
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_stocks
+    entities:
+    - stocks: Infosys stocks
+  - slot_was_set:
+    - stocks: Infosys stocks
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: Infosys stocks
+  - intent: affirm
+  - action: utter_scheme
+  - intent: get_scheme
+    entities:
+    - sch: Mudra bank scheme
+  - slot_was_set:
+    - sch: Mudra bank scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: Mudra bank scheme
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_vc
+    entities:
+    - vc: vc
+  - slot_was_set:
+    - vc: vc
+  - action: utter_subs
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: get_bot
+  - action: utter_bot
+  - action: utter_scheme
+  - intent: reject
+  - action: utter_ask_stats
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: default_nothing
+  - action: utter_default
+  - action: utter_stock
+  - intent: get_stocks
+    entities:
+    - stocks: gold price
+  - slot_was_set:
+    - stocks: gold price
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: gold price
+  - intent: get_stocks
+    entities:
+    - stocks: price of bitcoin
+  - slot_was_set:
+    - stocks: price of bitcoin
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: price of bitcoin
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_scheme
+    entities:
+    - sch: udyog yojna
+  - slot_was_set:
+    - sch: udyog yojna
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: udyog yojna
+  - intent: get_scheme
+    entities:
+    - sch: scheme for startups
+  - slot_was_set:
+    - sch: scheme for startups
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: scheme for startups
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: mentor
+  - slot_was_set:
+    - typ: mentor
+  - action: get_typ_now
+  - action: utter_ask_mentor
+  - intent: reject
+  - action: utter_stock
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: get_mentee_info
+  - action: utter_mentee_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: null
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: get_stocks
+    entities:
+    - stocks: latest startup stocks
+  - slot_was_set:
+    - stocks: latest startup stocks
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: latest startup stocks
+  - intent: get_scheme
+    entities:
+    - sch: The Motley Fool
+  - slot_was_set:
+    - sch: The Motley Fool
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: The Motley Fool
+  - intent: default_nothing
+  - action: utter_default
+  - action: utter_stock
+  - intent: get_vc
+    entities:
+    - vc: vc
+  - slot_was_set:
+    - vc: vc
+  - action: utter_subs
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: about_us
+  - action: utter_about_us
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: get_bot
+  - action: utter_bot
+  - action: utter_scheme
+  - intent: get_scheme
+    entities:
+    - sch: government startup scheme
+  - slot_was_set:
+    - sch: government startup scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: government startup scheme
+  - intent: get_scheme
+    entities:
+    - sch: DPIIT Scheme
+  - slot_was_set:
+    - sch: DPIIT Scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: DPIIT Scheme
+  - intent: goodbye
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_stocks
+    entities:
+    - stocks: Highest Trending stock today
+  - slot_was_set:
+    - stocks: Highest Trending stock today
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: Highest Trending stock today
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: reject
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: Story from Conversation ID c7194e2d909c4958abb875d7beb6edc5
+  steps:
+  - action: utter_greet
+  - slot_was_set:
+    - typ: Startup
+  - intent: greet
+  - intent: reject
+  - intent: get_start_info
+  - slot_was_set:
+    - typ: Startup
+  - intent: get_scheme
+    entities:
+    - sch: government scheme
+  - slot_was_set:
+    - sch: government scheme
+  - action: get_scheme_now
+  - slot_was_set:
+    - sch: government scheme
+  - intent: get_startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: null
+  - intent: get_bot
+  - action: utter_bot
+  - action: utter_stock
+  - intent: creator
+  - action: utter_creator
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+- story: Story from Conversation ID 3bf3c80370604a0bab395c513e685b2b
+  steps:
+  - action: utter_greet
+  - intent: greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_stocks
+    entities:
+    - stocks: the
+    - stocks: Paytm latest deal
+  - slot_was_set:
+    - stocks: Paytm latest deal
+  - action: get_stocks_now
+  - slot_was_set:
+    - stocks: Paytm latest deal
+  - intent: get_stocks
+    entities:
+    - stocks: the
+    - stocks: Paytm stocks today
+  - slot_was_set:
+    - stocks: Paytm stocks today
+- story: Story from Conversation ID b50234e51cb9421cb1c63d639713b19f
+  steps:
+  - intent: start_ment
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_scheme
+    entities:
+    - sch: DPIIT scheme
+  - slot_was_set:
+    - sch: DPIIT scheme
+  - action: get_scheme_now
+  - intent: about_us
+  - action: utter_about_us
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: startup
+  - slot_was_set:
+    - typ: startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: about_us
+  - action: utter_about_us
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: gov_schm_info
+  - action: utter_gov_chm_info_now
+  - intent: seed_fund
+  - action: utter_seed_funds
+  - intent: seed_fund
+    entities:
+    - funds: Crowdfunding
+  - slot_was_set:
+    - funds: Crowdfunding
+  - action: get_fundinfo_now
+  - slot_was_set:
+    - funds: Crowdfunding
+  - intent: get_scheme
+    entities:
+    - sch: crowdfunding scheme
+  - slot_was_set:
+    - sch: crowdfunding scheme
+  - action: get_scheme_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Mentor
+  - slot_was_set:
+    - typ: Mentor
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Mentor
+  - action: utter_ask_mentor
+  - intent: reject
+  - action: utter_stock
+  - intent: about_us
+  - action: utter_about_us
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: get_mentee_info
+  - action: utter_mentee_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_stocks
+    entities:
+    - stocks: latest Infosys stock price
+  - slot_was_set:
+    - stocks: latest Infosys stock price
+  - action: get_stocks_now
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: get_startup
+    entities:
+    - strtp: Startup
+  - slot_was_set:
+    - strtp: Startup
+  - action: get_startup_now
+  - slot_was_set:
+    - strtp: Startup
+  - intent: affirm
+  - action: utter_stock
+  - intent: gov_schm_info
+  - action: utter_gov_chm_info_now
+  - intent: seed_fund
+  - action: utter_seed_funds
+  - intent: seed_fund
+    entities:
+    - funds: Venture Capital
+  - slot_was_set:
+    - funds: Venture Capital
+  - action: get_fundinfo_now
+  - slot_was_set:
+    - funds: Venture Capital
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+- story: Story from Conversation ID 4a735eb4ebc24427bc9a7e8005838d15
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - typ: Startup
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: get_start_info
+  - action: utter_startup_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: gov_schm_info
+  - action: utter_gov_chm_info_now
+  - intent: seed_fund
+  - action: utter_seed_funds
+  - intent: seed_fund
+    entities:
+    - funds: Venture Capital
+  - slot_was_set:
+    - funds: Venture Capital
+  - action: get_fundinfo_now
+  - slot_was_set:
+    - funds: Venture Capital
+  - intent: affirm
+  - action: utter_stock
+  - slot_was_set:
+    - stocks: Infosys stock
+  - intent: get_stocks
+    entities:
+    - stocks: Infosys stock
+  - action: get_stocks_now
+  - intent: affirm
+  - action: utter_ask_stats
+  - intent: reject
+  - action: utter_subscribe
+  - slot_was_set:
+    - sup: signup
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: get_ip
+  - action: get_ip_now
+  - slot_was_set:
+    - ip: 114.79.165.63
+  - slot_was_set:
+    - city: Panvel
+  - slot_was_set:
+    - zip: '410206'
+  - slot_was_set:
+    - rgname: Maharashtra
+  - slot_was_set:
+    - regcode: MH
+  - action: utter_area_confirm
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_ip
+  - action: get_ip_now
+  - slot_was_set:
+    - ip: 114.79.166.103
+  - slot_was_set:
+    - city: Panvel
+  - slot_was_set:
+    - zip: '410206'
+  - slot_was_set:
+    - rgname: Maharashtra
+  - slot_was_set:
+    - regcode: MH
+  - action: utter_area_confirm
+  - intent: affirm
+  - action: get_incubator_now
+  - action: utter_incubator_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: reject
+  - action: utter_bye
+  - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_ip
+  - action: get_ip_now
+  - slot_was_set:
+    - ip: 49.33.220.227
+  - slot_was_set:
+    - city: Powai
+  - slot_was_set:
+    - zip: '400087'
+  - slot_was_set:
+    - rgname: Maharashtra
+  - slot_was_set:
+    - regcode: MH
+  - action: utter_area_confirm
+  - intent: affirm
+  - action: get_incubator_now
+  - action: utter_incubator_now
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_mentor
+  - action: utter_field
+  - intent: get_field
+    entities:
+    - ff: Education
+  - slot_was_set:
+    - ff: Education
+  - action: utter_field
+  - action: get_mentors_now
+  - slot_was_set:
+    - mentor_name: Kanisshka Tyagi
+  - slot_was_set:
+    - mentor_info: Kanisshka Tyagi is a lawyer, who graduated from Campus Law Center, Delhi University, and joined a Delhi based corporate and commercial law firm, where she got extensive exposure in real estate sector and other general corporate and commercial work. She subsequently worked with leading corporate and commercial law firms in New Delhi (NCR Region) and got the opportunity to expand her practice base to include insolvency; private equity and regularly advised on cross border investment transactions amongst other practice areas.• Kanisshka joined Kaden Boriss, a global law firm, as Partner in 2011. She has executed and advised both foreign and domestic companies on transactions related to private equity investments, insolvency and bankruptcy, real estate, acquisitions, corporate restructuring arrangements, commercial contracts and secretarial matters. Besides Kanisshka has been a regular contributor to law magazines and journals and regular speaker at conferences and seminars and has addressed a wide variety of audiences at various platforms on corporate-legal issues. • Kanisshka with a view to encourage and mentor the young startups in India co-founded along with lawyer and company secretary and her colleague at Legum Amicuss, The WorkPlace, co-working offices and facilitated and mentored several startups and their respective founders for a period of 2 years, at the end of which the stake in The WorkPlace was diluted in favour of finance head of a leading co-working office brand.• Kainsshka is currently heading Business Strategies Department of Legum Amicuss, a young dynamic law firm based at New Delhi. Her personal interest lies at structuring of new businesses/startups and structuring them with holistic approach.
+  - slot_was_set:
+    - mentor_area: Telecommunication & Networking, Construction, Food & Beverages, Education
+  - action: utter_mentor_rec
+  - intent: get_mentor_info
+  - action: utter_mentor_info_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: get_mentor_num
+  - action: utter_mentor_num
+  - intent: gov_schm_info
+  - action: utter_gov_chm_info_now
+  - intent: seed_fund
+  - action: utter_seed_funds
+  - intent: seed_fund
+    entities:
+    - funds: Crowdfunding
+  - slot_was_set:
+    - funds: Crowdfunding
+  - action: get_fundinfo_now
+  - slot_was_set:
+    - funds: Crowdfunding
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_typ
+  - intent: start_ment
+    entities:
+    - typ: Startup
+  - slot_was_set:
+    - typ: Startup
+  - action: get_typ_now
+  - slot_was_set:
+    - typ: Startup
+  - action: utter_ask_mentee
+  - intent: reject
+  - action: utter_stock
+  - intent: get_ip
+  - action: get_ip_now
+  - slot_was_set:
+    - ip: 114.79.174.86
+  - slot_was_set:
+    - city: Panvel
+  - slot_was_set:
+    - zip: '410206'
+  - slot_was_set:
+    - rgname: Maharashtra
+  - slot_was_set:
+    - regcode: MH
+  - action: utter_area_confirm
+  - intent: affirm
+  - action: get_incubator_now
+  - slot_was_set:
+    - Incname: Mahatma Education Society's Pillai Centre of Innovation and Entrepreneurship
+  - slot_was_set:
+    - Incloc: dr. k. m. vasudevan pillai campus plot no. 10, sector 16, new panvel – 410 206 maharashtra, india
+  - slot_was_set:
+    - Incarea: AI, Green Technology, Internet of Things, Robotics
+  - slot_was_set:
+    - Incaccpt: 100%
+  - action: utter_incubator_now
+  - intent: get_ip
+    entities:
+    - city: Hyderabad
+  - slot_was_set:
+    - city: Hyderabad
+  - action: get_incubator_now
+  - slot_was_set:
+    - Incname: EdVenture Incubation Foundation
+  - slot_was_set:
+    - Incloc: nmdc colony, venkatadri colony, masab tank, hyderabad, telangana 500264
+  - slot_was_set:
+    - Incarea: Automotive, Computer Vision, Telecommunication & Networking, Construction, AI
+  - slot_was_set:
+    - Incaccpt: 14%
+  - action: utter_incubator_now
+  - intent: get_ip
+    entities:
+    - city: Noida
+  - slot_was_set:
+    - city: Noida
+  - action: get_incubator_now
+  - slot_was_set:
+    - Incname: Sharda Launchpad Foundation
+  - slot_was_set:
+    - Incloc: sharda university, plot no 32-34, knowledge park 3, greater noida, up-201310
+  - slot_was_set:
+    - Incarea: Architecture Interior Design, AR VR (Augmented + Virtual Reality)
+  - slot_was_set:
+    - Incaccpt: 66%
+  - action: utter_incubator_now
+  - intent: get_ip
+    entities:
+    - city: agra
+  - slot_was_set:
+    - city: agra
+  - action: get_incubator_now
+  - action: utter_incubator_now
+  - intent: affirm
+  - action: utter_stock
+  - intent: reject
+  - action: utter_subscribe
+  - intent: get_signup
+    entities:
+    - sup: signup
+  - slot_was_set:
+    - sup: signup
+  - action: get_signup_now
+  - slot_was_set:
+    - sup: signup
+  - action: action_restart
