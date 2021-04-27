@@ -1,0 +1,340 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- affirm
+- reject
+- get_signup
+- greet
+- get_ip
+- start_ment
+- get_mentor_info
+- get_field
+- get_mentor_num
+- gov_schm_info
+- seed_fund
+- get_mentor
+- about_us
+- get_startup
+- get_start_info
+- get_stocks
+- get_mentee_info
+- get_scheme
+- goodbye
+- get_bot
+- get_vc
+- default_nothing
+- get_register
+- get_summary
+- get_top_startup
+- creator
+entities:
+- city
+- ff
+- funds
+- ip
+- regcode
+- rgname
+- sch
+- stock
+- stocks
+- strtp
+- sup
+- top
+- typ
+- vc
+- zip
+slots:
+  ff:
+    type: text
+    influence_conversation: true
+  stocks:
+    type: text
+    influence_conversation: true
+  sch:
+    type: text
+    influence_conversation: true
+  vc:
+    type: text
+    influence_conversation: true
+  strtp:
+    type: text
+    influence_conversation: true
+  typ:
+    type: text
+    influence_conversation: true
+  sup:
+    type: text
+    influence_conversation: true
+  funds:
+    type: text
+    influence_conversation: true
+  ip:
+    type: text
+    influence_conversation: true
+  city:
+    type: text
+    influence_conversation: true
+  zip:
+    type: text
+    influence_conversation: true
+  rgname:
+    type: text
+    influence_conversation: true
+  regcode:
+    type: text
+    influence_conversation: true
+  Incarea:
+    type: text
+    influence_conversation: true
+  Incloc:
+    type: text
+    influence_conversation: true
+  Incaccpt:
+    type: text
+    influence_conversation: true
+  Incname:
+    type: text
+    influence_conversation: true
+  mentor_name:
+    type: text
+    influence_conversation: true
+  mentor_info:
+    type: text
+    influence_conversation: true
+  mentor_area:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hello! Anonymous!
+  - text: Hello Human
+  - text: Hey Wanderer
+  utter_stock:
+  - text: Do you want to know about something i can help?
+  - text: Anything You want to know about?
+  - text: How can i help You..
+  utter_confirm:
+  - text: Okay setting my wire to do this task...
+  - text: Working with some bits array......
+  utter_bot:
+  - text: Yup I am a Bot Just a smart one!
+  utter_scheme:
+  - text: ANy scheme u want to know about
+  - text: Do u want to know about any scheme?
+  utter_ask_typ:
+  - buttons:
+    - payload: /start_ment{"typ":"Startup"}
+      title: Startup
+    - payload: /start_ment{"typ":"Mentor"}
+      title: Mentor
+    text: So you are A Startup or Mentor..?
+  utter_subs:
+  - buttons:
+    - payload: /get_signup{"sup":"signup"}
+      title: Subs
+    - payload: /reject
+      title: No thanks
+    text: If you want to know about this Please Signup..type signup for our resources!
+  utter_subscribe:
+  - buttons:
+    - payload: /get_signup{"sup":"signup"}
+      title: Subs
+    - payload: /reject
+      title: Nope
+    text: Do you want to Sign up...type signup?
+  utter_seed_funds:
+  - buttons:
+    - payload: SBA
+      title: SBA
+    - payload: Bank Loans
+      title: Bank Loans
+    - payload: Venture Capital
+      title: Venture Capital
+    - payload: Angel Investors
+      title: Angel Investors
+    - payload: Crowdfunding
+      title: Crowdfunding
+    - payload: Family and Friends
+      title: Family and Friends
+    - payload: Personal Savings
+      title: Personal Savings
+    text: There are different funds types such as-
+  utter_bye:
+  - text: It was nice talking to you let catch up soon
+  - text: Sayonara Meet u Soon!!
+  - text: Ok Unicorn meet u Soon..
+  utter_field:
+  - buttons:
+    - payload: Travel&Tourism
+      title: Travel&Tourism
+    - payload: Animation
+      title: Animation
+    - payload: Sports
+      title: Sports
+    - payload: Education
+      title: Education
+    - payload: Construction
+      title: Construction
+    - payload: Analytics
+      title: Analytics
+    - payload: Professional&CommercialServices
+      title: Professional&CommercialServices
+    - payload: DatingMatrimonial
+      title: DatingMatrimonial
+    - payload: GreenTechnology
+      title: GreenTechnology
+    - payload: ComputerVision
+      title: ComputerVision
+    - payload: Healthcare&Lifesciences
+      title: Healthcare&Lifesciences
+    - payload: RenewableEnergy
+      title: RenewableEnergy
+    - payload: FinanceTechnology
+      title: FinanceTechnology
+    - payload: Design
+      title: Design
+    - payload: Agriculture
+      title: Agriculture
+    - payload: AeronauticsAerospace&Defence
+      title: AeronauticsAerospace&Defence'
+    - payload: WasteManagement
+      title: WasteManagement
+    - payload: Others
+      title: Others
+    - payload: ArchitectureInteriorDesign
+      title: ArchitectureInteriorDesign
+    - payload: Automotive
+      title: Automotive
+    - payload: Marketing
+      title: Marketing
+    - payload: ITServices
+      title: ITServices
+    - payload: Fashion
+      title: Fashion
+    - payload: InternetofThings
+      title: InternetofThings
+    - payload: Pets&Animals
+      title: Pets&Animals
+    - payload: Food&Beverages
+      title: Food&Beverages
+    - payload: EnterpriseSoftware
+      title: EnterpriseSoftware
+    - payload: HumanResources
+      title: HumanResources
+    - payload: Advertising
+      title: Advertising
+    - payload: Retail
+      title: Retail
+    - payload: Chemicals
+      title: Chemicals
+    - payload: ARVR(Augmented+VirtualReality)
+      title: ARVR(Augmented+VirtualReality)
+    - payload: Media&Entertainment
+      title: Media&Entertainment
+    - payload: Robotics
+      title: Robotics
+    - payload: Telecommunication&Networking
+      title: Telecommunication&Networking
+    - payload: TechnologyHardware
+      title: TechnologyHardware
+    - payload: AI
+      title: AI
+    - payload: Art&Photography
+      title: Art&Photography
+    - payload: SocialImpact
+      title: SocialImpact
+    - payload: Non-RenewableEnergy
+      title: Non-RenewableEnergy
+    text: So which is your field-
+  utter_ask_field:
+  - text: Please provide me the field
+  utter_ask_info:
+  - text: So You want know about {sch} this would be great..
+  utter_ask_stats:
+  - text: I can tell u alot about the Stocks,Startups,News..kinda Startup Google
+  - text: Hey Do u want to know about any scheme facts etcs I can help..
+  - text: Is there any thing else i can help...some info on scheme etc
+  utter_ask_mentor:
+  - text: Sir Mentor You in a search for a mentee?...Do Signup for currated experience
+  - text: Sir Mentor Do you want to form some connections...Do Signup for currated experience
+  - text: Mentor any thoughts to join a pool of Startup Network....Do Signup for currated experience
+  utter_ask_summary:
+  - text: Hey Buddy do you want to share your thought get some inference by our 24x7 AI Mentor?
+  - text: If You are eager to enter this world do u want to talk with our AI 24x7 Mentor on Your Ideas..
+  utter_ask_mentee:
+  - text: Hey Buddy want to catch up with your ideas to a Mentee on your Portal?..Do signup
+  - text: Do you want to talk with our IN person Mentors ...Signup please
+  utter_register_process:
+  - text: So inorder to Join our network U have to provide your RID registered with NASSCOM we would infer the Experience from there and allow you a currated experience which would led your expertise toward next big Unicorn..Do u want to start Signup Process?
+  utter_startup_info_now:
+  - text: Yup many startup has joined our Network major players from Fintech like Solimono,Luski,Calv other AI startup such as Calvision,stock.AI,Pratimbh Do join to become next Unicorn!!
+  utter_mentor_info_now:
+  - text: Yes You can join our Portal to connect to Different Mentors by just registering with us on some basic info and we would recomend you the best Mentor currated according to your Fields
+  utter_default:
+  - text: Sorry I cant function on this currently in Development.....Or maybe try something else
+  - text: I dont know this ...blame my creator for this
+  utter_mentor_num:
+  - text: There are 127 Mentor currently registered on our Portal with more than 24 with 10 year of experience.....
+  utter_mentee_info_now:
+  - text: Yes You can connect with different Startup owner we would currate the experience according to your choices recommend some startup to give expertises...
+  utter_about_us:
+  - text: Thanks for asking this...mm We are group of people just like u who want to make the guidance for any budding startup in a way easy by providing them a portal a platform backed by AI and Humans too to have a future for all dreams...Thats a long speech LOL
+  utter_creator:
+  - text: Your Creator and my Creators...Creator both are the same does this make sense...Lol
+  utter_area_confirm:
+  - text: So your area is {city},{rgname}
+  utter_mentor_rec:
+  - text: |
+      So the Mentor Best for your field would be {mentor_name}
+       ,Here some info: {mentor_area}
+  utter_incubator_now:
+  - text: The closest Incubator to your location is the NAME--{Incname};FIELD--{Incarea};ACCEPTANCE RATE--{Incaccpt}
+  utter_gov_chm_info_now:
+  - text: If you ever consider staring up your company and thinking of funding from the government of India, good news. There is 10,000 crore allocated from the Union budget to support your idea. Below are the most fundamental questions and answers how to register your company as startup.Startup means an entity, incorporated or registered in India :\nNot prior to five years, With annual turnover not exceeding INR 25 crore in any preceding financial year, and Working towards innovation, development, deployment or commercialization of new products, processes or services driven by technology or intellectual property Provided that such entity is not formed by splitting up, or reconstruction, of a business already in existence. Provided also that an entity shall cease to be a Startup if its turnover for the previous financial years has exceeded INR 25 crore or it has completed 5 years from the date of incorporation/ registration. Provided further that a Startup shall be eligible for tax benefits only after it has obtained certification from the Inter-Ministerial Board, setup for such purpose.
+actions:
+- get_field_now
+- get_fundinfo_now
+- get_incubator_now
+- get_ip_now
+- get_mentors_now
+- get_scheme_now
+- get_signup_now
+- get_startup_info_now
+- get_startup_now
+- get_stocks_now
+- get_summary
+- get_top_startup_now
+- get_typ_now
+- get_vc_now
+- utter_about_us
+- utter_area_confirm
+- utter_ask_field
+- utter_ask_info
+- utter_ask_mentee
+- utter_ask_mentor
+- utter_ask_stats
+- utter_ask_summary
+- utter_ask_typ
+- utter_bot
+- utter_bye
+- utter_confirm
+- utter_creator
+- utter_default
+- utter_field
+- utter_gov_chm_info_now
+- utter_greet
+- utter_incubator_now
+- utter_mentee_info_now
+- utter_mentor_info_now
+- utter_mentor_no
+- utter_mentor_num
+- utter_mentor_rec
+- utter_register_process
+- utter_scheme
+- utter_seed_funds
+- utter_startup_info_now
+- utter_stock
+- utter_subs
+- utter_subscribe
