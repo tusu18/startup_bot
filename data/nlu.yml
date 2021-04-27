@@ -1,0 +1,362 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Whats up
+    - Anyone
+    - Hey
+    - Anybody
+    - bot
+    - hey
+    - hi
+    - hello
+    - hi bott
+    - heyy
+- intent: get_stocks
+  examples: |
+    - Can you tell me about [Latest stock news](stocks)
+    - Which [stocks is trending] right now?{"entity": "stocks", "value": "stocks is trending"}
+    - Which is the [Hottest Stock Today](stocks)
+    - Which [startup has the largest turnover this year]{"entity": "stocks", "value": "Hottest Stock Today"}
+    - Any [stocks to lookout] this week?{"entity": "stocks", "value": "stocks to lookout"}
+    - What is the [stock value of Tesla]{"entity": "stocks", "value": "stock value of tesla"}
+    - Which [startup has the highest growth]this year](stocks)
+    - What are the [trending stocks today](stocks)
+    - What is the [stock price of Paytm](stocks)
+    - Tell me about [latest Unicorn Startup](stocks)
+    - tell me about [paytm stocks](stocks)
+    - Ok tell me about [TCS stocks](stocks)
+    - Okay tell me about [Infosys stocks](stocks)?
+    - what is the current [gold price](stocks)?
+    - what si the current [price of bitcoin](stocks)?
+    - What is the [latest startup stocks](stocks) to watch
+    - Yes tell me about [Highest Trending stock today](stocks)
+    - Yes tell me about [the](stocks) [Paytm latest deal](stocks)
+    - So what is [the](stocks) [Paytm stocks today](stocks)?
+    - Yes tell me about [latest Infosys stock price](stocks)
+- intent: get_vc
+  examples: |
+    - What are the [VC](vc)on your site?
+    - Can you give list of [VC] registered on your portal{"entity": "vc", "value": "VC"}
+    - Can i get info on some [VC] on your site?{"entity": "vc", "value": "VC"}
+    - WHat [VC] are available right now{"entity": "vc", "value": "VC"}
+    - Top [VC] and firm on your portal{"entity": "vc", "value": "VC"}
+    - So what [vc](vc) are there on your portal
+    - What [vc](vc) are there on your portal?
+    - What [VC](vc) are there on your portal?
+    - SO what type of [vc](vc) and how many are there on your portal?
+    - Can u get me list of [vc](vc) on your portal
+- intent: get_scheme
+  examples: |
+    - What do you know about [DPIIT scheme](sch)
+    - Do you know about [India Seed SCheme](sch)
+    - Can You tell me about [Venture Capital Scheme](sch)
+    - What is [Extra Mural Research Scheme](sch)
+    - Tell me about [TDP scheme](sch)
+    - Can you tell me about [India seed scheme](sch)
+    - So what is [dpiit scheme](sch)
+    - ok tell me about [aspire](sch)
+    - Yes tell me about [DPIIT scheme](sch)
+    - yes what is [startup india scheme](sch)?
+    - Tell me about [Startup India Seed Fund] scheme(sch)
+    - yeah tell me about [ASPIRE scheme](sch)
+    - What is [MUDRA BANK scheme](sch)
+    - What is [Mudra bank scheme](sch)
+    - tell me about [udyog yojna](sch) scheme
+    - tell me about the best [schemes for startup]{"entity": "sch", "value": "scheme for startups"}s
+    - Tell me more about [The Motley Fool](sch)
+    - Is there any [government startup scheme](sch)?
+    - what is [DPIIT Scheme](sch)?
+    - Okay tell me about any [government scheme](sch) for startup
+    - oh nice is there any [crowdfunding scheme](sch)?
+- intent: goodbye
+  examples: |
+    - Bye
+    - Ok bye
+    - Goodbye
+    - Thank you
+    - Ok thanks
+    - Bye bye
+    - no thanks
+    - Thanks
+    - No thanks
+    - NO
+    - ok thanks bye
+- intent: reject
+  examples: |
+    - No
+    - no
+    - no thanks
+    - nah
+    - nope
+    - no man
+    - Nope
+    - No i dont want to signup
+    - noo
+    - NO thanks
+    - No thanks
+    - no not at all
+    - no man shut up
+    - not now
+    - No i dont want to
+    - No man thanks
+    - Nothing
+- intent: get_signup
+  examples: |
+    - [signup](sup)
+    - [sign me] up{"entity": "sup","value": "sign me"}
+    - Yes [signup](sup)
+- intent: get_mentor
+  examples: |
+    - Tell me about Mentor in my field
+    - Please give info on Mentor in my field
+    - So what are the mentor in my field
+    - Can i connect to mentor in my field
+    - Recommend me some mentor
+    - Give me mentors in my field
+    - Tell me about mentor in my field so i can connect
+- intent: get_field
+  examples: |
+    - [Animation](ff)
+    - [Sports](ff)
+    - [Education](ff)
+    - [GreenTechnology](ff)
+    - [ComputerVision](ff)
+- intent: affirm
+  examples: |
+    - Yes
+    - Sure
+    - Okay
+    - Yeah
+    - Yes Please
+    - Yup
+    - thanks for this
+    - yes
+    - Thanks
+    - ok
+    - thanks
+    - YEah
+    - Ok thanks
+    - ok thanks
+    - Yeah thanks
+    - Yeah Thanks
+    - Nice
+    - OKay thanks
+    - Okay that was good
+    - Okay Cool
+    - nice
+    - THat was good
+    - Tthanks man
+    - ok thanks for the help
+    - Okay that is good
+    - okay that is nice
+    - okay nice
+    - oh nice
+    - Oh nice
+    - Oh thank you
+    - That is nice thanks
+    - YEs
+    - Ok thaks
+    - Thanks for the info
+    - Oh thanks
+    - Yess
+- intent: get_startup
+  examples: |
+    - Tell me about [Startup] in states{"entity": "strtp","value": "Startup"}
+    - I want to know [startup] in states{"entity": "strtp","value": "startup"}
+    - which states have [startup]{"entity": "strtp", "value": "Startup"}
+    - which state has the highest [startup]?{"entity": "strtp","value": "startup"}
+    - Can You give me the states with highest [Startup]?{"entity": "strtp","value": "Startup"}
+    - Do MAharashtra have highest [Startups]?{"entity": "strtp","value": "Startup"}
+    - What are the [Startup] Stats?{"entity": "strtp","value": "Startup"}
+    - Which state has the highest [startup]?{"entity": "strtp","value": "startup"}
+    - Can You give stats on [Startup](strtp) in different state
+    - Which states have highest startup counts
+    - Okay SO how many startups are there in India according to state
+    - Which states have the highest [startup]{"entity": "strtp", "value": "Startup"}
+- intent: start_ment
+  examples: |
+    - [Startup](typ)
+    - [mentor](typ)
+    - [startup]{"entity": "typ", "value": "Startup"}
+    - [Mentor](typ)
+    - /start_ment
+    - /startup
+- intent: get_summary
+  examples: |
+    - So basically my Idea is that i have an app it would recognize all the food act as a calorie intake meter so that they can improve health
+- intent: get_bot
+  examples: |
+    - thanks so what is your name?
+    - Who are you?
+    - What is your name?
+    - Are you a bot?
+    - Are you a human?
+    - what is your name
+    - what is your name?
+    - Are u a bot?
+    - Oh nice So what is your name
+- intent: get_top_startup
+  examples: |
+    - Which are the top startup from [Maharashtra](top)?
+    - What are the top startup from [UP](top)?
+    - Best startup from [Mumbai](top)?
+    - Which are the top startup from [UP](top)?
+- intent: get_register
+  examples: |
+    - What is the process for registaration?
+    - Yes how can i register on your portal  as Mentor?
+    - How can i register on your portal as Mentor
+    - what are the registeration process
+- intent: get_start_info
+  examples: |
+    - What type of startup are there on Your portal?
+    - So which type of startup are there on Your network?
+    - Are there any startup on your network
+    - How many startup are there on your site?
+    - Are there any mentee or startup on Your portal?
+    - Tell me about startup on your portal
+    - Tell me about startup which are on your portal
+    - What type of startup are there on your portal
+    - Yes how many startup does your portal has?
+    - how many startups are available on your site
+    - Which type of startup are there on your site
+    - And how many startups do u have?
+    - and how many startups do u have
+    - Good and which startups has joined this site
+- intent: get_mentor_info
+  examples: |
+    - How can i get a Mentor
+    - I want to have a Mentor
+    - I want to discuss with a mentor
+    - Are there any Mentor available
+    - How many Mentor are experienced
+    - Yeah how can i find a mentor on your portal
+    - How can i get Mentor through this portal
+    - Yeah tell me how i can reach a mentor?
+    - Okay tell me how i can connect to a Mentor?
+    - Ok so how can i connect to a Mentor on this?
+    - Yeah how can i connect to mentor
+    - So how can i join your portal
+    - Okay so how can i find Mentor?
+    - How can i connect to a mentor
+    - Oh thanks for this how can i connect to him
+- intent: get_mentor_num
+  examples: |
+    - What are the number of Mentors on Your Portal
+    - How many Mentors are there on your site
+    - Tell me numbers of Mentor on your network
+    - How many Mentor are register on your site
+    - Number of Mentor on Your portal?
+    - Tell me how many mentors do you have
+    - So how many mentors do you have?
+    - SO how many mentor do u have?
+    - Okay so how many mentors do u have?
+    - Okay so how many mentors do you have
+    - Oh thanks...so how many mentors are there on this site
+    - So how many mentors do You have?
+- intent: get_mentee_info
+  examples: |
+    - How can i search for a mentee on your portal?
+    - How can i Connect with startups on Your Network?
+    - Can I connect to startup Directly?
+    - What are the Way to connect to Startup?
+    - I want to connect with the Startup on Your Portal?
+    - So what does your portal offer how can i connect with startups?
+    - What to do to connect to startup?
+    - how will u connect me or help to make startup?
+    - How can i connect to the startups?
+- intent: default_nothing
+  examples: |
+    - tell me about your site
+    - So who are the motely fool
+    - why is moon round
+    - hatbe
+    - fuck you
+    - go fuvk off
+    - what is google
+    - lavde
+    - bhak bsdk
+    - So Calv was with u from when?
+- intent: about_us
+  examples: |
+    - what does your site do?
+    - What is your portal about?
+    - What are role of your Porta
+    - Can you define your portal or website?
+    - What benefits me joining your network
+    - What does your team do
+    - How do you Function
+    - What is this portal about?
+    - What does u guys do?
+    - Who are you people?
+    - What is this Portal about
+    - Yes what does u people do?
+    - What is your site about ?
+    - What do you people do on this?
+- intent: creator
+  examples: |
+    - Who is your creator
+    - Who made you
+    - What are you made of
+    - Who developed you
+    - Who is your lord
+    - Tell me who made u
+    - Who created u?
+- intent: gov_schm_info
+  examples: |
+    - What qualifies as a “Startup” for the purpose of Government schemes?
+    - How Statup can gain benefit from government scheme?
+    - What Should i do to apply any Government scheme?
+    - How can I get benefit from Government startup scheme?
+    - Startup Criteria for Government Scheme
+    - Is there any eligibility to qualify as Startup for Government Scheme
+    - how can i avail goverment help for startup
+    - How can a Startup benefit from government
+    - Yeah Can i have help from government in my startup
+    - Oh nice So is there any government scheme to help
+- intent: seed_fund
+  examples: |
+    - So how can i fund myself or find some funding?
+    - what are the type of funding one startup can i get
+    - Okay is there any other way to fund my startup
+    - [Venture Capital](funds)
+    - Ok if i want to have funding how can i fund
+    - [Crowdfunding](funds)(Crowdfunding)
+- intent: get_ip
+  examples: |
+    - Yeah tell me about incubator in my area
+    - So who are the Incubator closest to me
+    - Can you tell me aany Incubators
+    - Which Incubator is nearest to me
+    - Any Incubators Close by
+    - Incubators near me
+    - Best Incubator Near me
+    - I want to know about Incubator in my area
+    - Yes tell me about Incubators in my area?
+    - Yeah which Incubator is nearest to me?
+    - Which incubator is closest to me
+    - I want to connect to an Incubator
+    - Is there any incubator in [Hyderabad](city)
+    - Any Incubator in [Noida](city)
+    - Any Incubator in [agra](city)?
+- synonym: Hottest Stock Today
+  examples: |
+    - startup has the largest turnover this year
+- synonym: stock value of tesla
+  examples: |
+    - stock value of Tesla
+- synonym: scheme for startups
+  examples: |
+    - schemes for startup
+- synonym: Startup
+  examples: |
+    - startup
+- synonym: Which stocks is trending right now
+  examples: |
+    - Which stocks is trending right now?
+- synonym: TDP Scheme
+  examples: |
+    - TDP scheme
